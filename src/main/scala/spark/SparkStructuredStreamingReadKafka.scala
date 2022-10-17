@@ -8,7 +8,7 @@ object SparkStructuredStreamingReadKafka {
   def main(args: Array[String]): Unit = {
 
     val spark = SparkSession.builder()
-      .appName("Streaming read from file")
+      .appName("Streaming read from Kafka")
       .config("spark.master", "local[2]")
       .getOrCreate()
 

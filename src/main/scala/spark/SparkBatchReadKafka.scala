@@ -7,7 +7,7 @@ object SparkBatchReadKafka {
   def main(args: Array[String]): Unit = {
 
     val spark = SparkSession.builder()
-      .appName("Streaming read from file")
+      .appName("Batch read from Kafka")
       .config("spark.master", "local[2]")
       .getOrCreate()
 
