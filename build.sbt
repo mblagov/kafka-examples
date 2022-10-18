@@ -12,6 +12,7 @@ val sparkVersion = "3.3.0"
 val postgresVersion = "42.2.2"
 
 libraryDependencies ++= Seq(
+  "org.apache.kafka" % "kafka-clients" % "3.3.1",
   "org.apache.spark" %% "spark-core" % sparkVersion,
   "org.apache.spark" %% "spark-sql" % sparkVersion,
   "org.apache.spark" %% "spark-avro" % sparkVersion,
