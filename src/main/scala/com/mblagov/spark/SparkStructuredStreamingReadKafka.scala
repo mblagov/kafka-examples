@@ -16,10 +16,10 @@ object SparkStructuredStreamingReadKafka {
       .format("kafka")
       .option("kafka.bootstrap.servers", "localhost:29092")
       .option("subscribe", "mblagov_test")
-      .option("startingOffsetsByTimestamp", """{"mblagov_test": {"0": 1665522188000}}""")
+      .option("startingOffsets", "earliest")
       .load()
 
-    implicit val encder: Encoder[String] = Encoders.STRING
+    implicit val encoder: Encoder[String] = Encoders.STRING
 
     val dfw = df.writeStream
       .format("console")

@@ -17,7 +17,7 @@ object KafkaProducerExample {
 
     val producer = new KafkaProducer[String, String](producerProperties)
     try {
-      val record = new ProducerRecord[String, String]("mblagov_from_scala_producer", "key", "quux")
+      val record = new ProducerRecord[String, String]("mblagov_from_scala_producer", "key", "foo")
       producer.send(record)
     } catch {
       case e:Exception => e.printStackTrace()

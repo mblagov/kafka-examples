@@ -15,7 +15,7 @@ object SparkBatchReadKafka {
       .format("kafka")
       .option("kafka.bootstrap.servers", "localhost:29092")
       .option("subscribe", "mblagov_test")
-      .option("endingOffsetsByTimestamp", """{"mblagov_test": {"0": 1665522188000}}""")
+      .option("endingOffsetsByTimestamp", """{"mblagov_test": {"0": 1765522188000}}""")
       .load()
 
     df.show()
